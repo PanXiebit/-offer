@@ -105,10 +105,6 @@ void Test1_7()
 
 }
 
-
-
-
-
 int main()
 {
     Test1_7();
