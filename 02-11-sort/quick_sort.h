@@ -1,6 +1,19 @@
 #ifndef QUICK_SORT_H_INCLUDED
 #define QUICK_SORT_H_INCLUDED
 
+
+/* 快速排序
+
+1. 调整接口，快速排序的原理是两个指针从两端向中间移动
+2. 找主元，每次选择的主元中分最好。所以选择左中右三个元素的中间值作为主元 pivot
+3. 小细节： 将主元移动到倒数第二个位置。这样左右指针位置交叉时就是遍历结束时
+4. 左边指针移动，遇到大于等于 pivot 的元素时停止，右边的指针开始移动，遇到小于等于 pivot 的元素时停止，交换两个指针所指的元素
+5. 将所在位置元素与左指针所指元素交换 swap(num, p, right-1)
+6. 将主元两边的元素划分为两个子集，重复上面的操作
+
+快速排序的优点在于：一次交换即消除了很多逆序对，相比下插入排序和冒泡排序的交换操作只改变一个逆序对。
+*/
+
 void quicksort(int num[], int Left, int Right);
 int Median3(int num[], int Left, int Right);
 void InsertSort(int num[], int N);

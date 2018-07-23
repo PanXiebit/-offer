@@ -1,7 +1,12 @@
 #ifndef HEAP_SORT_H_INCLUDED
 #define HEAP_SORT_H_INCLUDED
 
-// 堆排序
+/* 堆排序
+
+1. 在给定数组基础上建立最大堆
+2. 将最大堆的根节点与数组的最后一个元素交换
+3. 剩下的元素调整为最大堆
+*/
 
 void HeapSort(int num[], int N)
 {
